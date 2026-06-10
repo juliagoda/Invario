@@ -1,0 +1,54 @@
+name:                Invario
+version:             0.1.0.0
+github:              "juliagoda/invario"
+license:             MIT
+author:              "Jagoda Gorska"
+maintainer:          "juliagoda.pl@protonmail.com"
+copyright:           "2026 Jagoda Gorska"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+category:            Telemetry
+
+description:         Framework for generating, collecting, processing, and exporting telemetry data
+
+dependencies:
+- base >= 4.7 && < 5
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  invario-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - invario
+
+tests:
+  invario-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - invario
