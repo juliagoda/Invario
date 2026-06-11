@@ -40,7 +40,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - invario
+    - Invario
 
 tests:
   invario-test:
@@ -51,4 +51,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - invario
+    - Invario
